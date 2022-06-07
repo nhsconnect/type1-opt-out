@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Type 1 Opt-out service: Make your choice
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/check-your-status-opt1",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Type 1 Opt-out service - Make your choice
+      </h1>
+
+      <p>
+        The data held in your GP medical records is shared with other healthcare professionals for the purposes of your individual care. It is also shared with other organisations to support health and care planning and research.
+      </p>
+
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">About your decision: </span>
+        <p>Your decision will not affect your individual care and you can change your mind anytime you like.</p>
+      </div>
+
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h2 class="nhsuk-fieldset__heading">
+              I allow my personally identifiable patient data to be shared outside of my GP practice for purposes except my own care to support health and care planning and research:
+            </h2>
+          </legend>
+      
+          <div class="nhsuk-radios">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+                Yes
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+                No
+              </label>
+            </div>
+      
+          </div>
+        </fieldset>
+
+        <div class="nhsuk-u-padding-bottom-4"></div>
+
+        <a class="nhsuk-button" href="/check-your-status-type1" class="button">Change</a>      
+
+      </div>
+      {% endblock %}

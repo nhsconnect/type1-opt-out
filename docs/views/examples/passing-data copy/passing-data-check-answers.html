@@ -1,21 +1,20 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Check answers - passing data from page to page
+  Example - passing data from page to page - step 5
 {% endblock %}
 
 {% block beforeContent %}
-<!-- Breadcrumbs -->
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link">Choose if your GP medical records is shared for research and planning</a></li>
-    </ol>
-    <p class="nhsuk-breadcrumb__back">
-      <a href="" class="nhsuk-breadcrumb__backlink">Back to Health A to Z</a>
-    </p>
-  </div>
-</nav>
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/docs",
+        text: "Home"
+      }
+    ],
+    href: "/docs/how-tos",
+    text: "How to guides"
+  }) }}
 {% endblock %}
 
 {% block content %}
@@ -23,14 +22,14 @@
     <div class="nhsuk-grid-column-three-quarters">
 
       <h1>
-        Check your details
+        Check your answers
       </h1>
 
       <dl class="nhsuk-summary-list">
         
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Your name
+            Name
           </dt>
           <dd class="nhsuk-summary-list__value">
             {{ data['first-name'] }} {{ data['last-name'] }}
@@ -44,42 +43,41 @@
       
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Your date of birth
+            Contact preference
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['example-day'] }} {{ data['example-month'] }} {{ data['example-year'] }}
+            {{ data['contact'] }}
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="/examples/passing-data/passing-data-question-dob">
-              Change<span class="nhsuk-u-visually-hidden"> data of birth</span>
+            <a href="/examples/passing-data/passing-data-question-contact">
+              Change<span class="nhsuk-u-visually-hidden"> contact preference</span>
             </a>
           </dd>        
         </div>
       
         <div class="nhsuk-summary-list__row">
           <dt class="nhsuk-summary-list__key">
-            Your NHS number
+            Conditions
           </dt>
           <dd class="nhsuk-summary-list__value">
-            {{ data['nhsnumber'] }}
+            <ul class="nhsuk-list nhsuk-u-margin-bottom-1">
+              {% for item in data['condition'] %}
+                <li>{{ item }}</li>
+              {% else %}
+                <li>No conditions selected</li>
+              {% endfor %}
+            </ul>
           </dd>
           <dd class="nhsuk-summary-list__actions">
-            <a href="/examples/passing-data/passing-data-question-nhs-number">
+            <a href="/examples/passing-data/passing-data-question-conditions">
               Change<span class="nhsuk-u-visually-hidden"> conditions</span>
             </a>
           </dd>
         </div>
         
       </dl>
-      <p>
-        By continuing you agree to let us use your details to:
-      </p>
-      <ul>
-        <li>check who you are</li>
-        <li>find your contact details from your health records so we can send you a security code</li>
-      </ul>
 
-      <a href="/examples/passing-data/passing-data-get-security-code" class="nhsuk-button">Agree and submit</a>
+      <a href="/examples/passing-data/passing-data-confirmation" class="nhsuk-button">Accept and send</a>
 
     </div>
   </div>

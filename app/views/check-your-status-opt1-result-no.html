@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Your choice - Types of data-sharing you can opt out
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-u-margin-top-4">
+        Your GP data Opt-out choice
+      </h1>
+
+      <p class="nhsuk-body-l">
+        You do NOT allow the use of your GP data to support vital health and care planning and research. <a href="https://service-manual.nhs.uk/design-system/componnets">Check what this means for you (Page opens in new window)</a>.
+      </p>
+
+      <dl class="nhsuk-summary-list">
+        
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Status
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            Opted-out
+          </dd>
+
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Date of the request
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            19 May 2022
+          </dd>
+
+        </div>
+
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Requester
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['first-name'] }} {{ data['last-name'] }}
+          </dd>
+
+        </div>
+      
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Channel
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            NHS.uk website
+          </dd>
+
+        </div>
+      
+        
+      </dl>
+
+      <a class="nhsuk-button" href="/type1-question" class="button">Change</a>
+      
+    </div>
+  </div>
+{% endblock %}

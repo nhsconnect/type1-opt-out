@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  What is your name? - Passing data example
+  Get security code - Passing data example
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,29 +22,23 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/examples/passing-data/passing-data-question-dob" method="post" autocomplete="off">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
-              Enter your name
-            </h1>
-          </legend>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="first-name">
-              First name
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
-          </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="last-name">
-              Last name
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
-          </div>
-        </fieldset>
-        <button class="nhsuk-button">Continue</button>
+      <form action="/examples/passing-data/passing-data-enter-security-code" method="post">
+        <div class="nhsuk-u-reading-width">
+          <h1>Get your security code</h1>
+          <p>
+            With the details you gave us we think we've found your contact details from your health records. We could only find your mobile number.
+          </p>
+          <p>
+            We now need to send you a security code. After 30 minutes your security code will not work.
+          </p>
+          <p class="nhsuk-u-font-weight-bold">
+            We will send your security code by text to ***321.
+          </p>
+        <button class="nhsuk-button">Get code</button>
       </form>
-
+      <p>
+        <a href="">What to do if you think these contact details are wrong?</a>
+      </p>
     </div>
   </div>
 {% endblock %}

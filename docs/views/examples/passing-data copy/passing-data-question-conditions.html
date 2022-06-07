@@ -5,17 +5,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-<!-- Breadcrumbs -->
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link">Choose if your GP medical records is shared for research and planning</a></li>
-    </ol>
-    <p class="nhsuk-breadcrumb__back">
-      <a href="" class="nhsuk-breadcrumb__backlink">Back to Health A to Z</a>
-    </p>
-  </div>
-</nav>
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/docs",
+        text: "Home"
+      }
+    ],
+    href: "/docs/how-tos",
+    text: "How to guides"
+  }) }}
 {% endblock %}
 
 {% block content %}

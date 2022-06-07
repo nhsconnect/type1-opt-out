@@ -5,17 +5,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-<!-- Breadcrumbs -->
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-  <div class="nhsuk-width-container">
-    <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link">Choose if your GP medical records is shared for research and planning</a></li>
-    </ol>
-    <p class="nhsuk-breadcrumb__back">
-      <a href="" class="nhsuk-breadcrumb__backlink">Back to Health A to Z</a>
-    </p>
-  </div>
-</nav>
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/docs",
+        text: "Home"
+      }
+    ],
+    href: "/docs/how-tos",
+    text: "How to guides"
+  }) }}
 {% endblock %}
 
 {% block content %}
@@ -27,7 +26,7 @@
           <fieldset class="nhsuk-fieldset" aria-describedby="conditions-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1 class="nhsuk-fieldset__heading">
-                Have you ever had any of these conditions?
+                How would you prefer to receive your confirmation?
               </h1>
             </legend>
             <div class="nhsuk-hint" id="conditions-hint">
@@ -35,29 +34,22 @@
             </div>
             <div class="nhsuk-checkboxes">
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="conditions-1" name="condition" type="checkbox" value="Asthma"{{ checked("condition", "Asthma") }}>
+                <input class="nhsuk-checkboxes__input" id="conditions-1" name="condition" type="checkbox" value="By phone"{{ checked("condition", "Asthma") }}>
                 <label class="nhsuk-label nhsuk-checkboxes__label" for="conditions-1">
-                  Asthma
+                  By phone
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="conditions-6" name="condition" type="checkbox" value="Epilepsy"{{ checked("condition", "Epilepsy") }}>
+                <input class="nhsuk-checkboxes__input" id="conditions-6" name="condition" type="checkbox" value="By email"{{ checked("condition", "Epilepsy") }}>
                 <label class="nhsuk-label nhsuk-checkboxes__label" for="conditions-6">
-                  Epilepsy
+                  By email
                 </label>
               </div>
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="conditions-7" name="condition" type="checkbox" value="Heart Disease"{{ checked("condition", "Heart Disease") }}>
+                <input class="nhsuk-checkboxes__input" id="conditions-7" name="condition" type="checkbox" value="By post"{{ checked("condition", "Heart Disease") }}>
                 <label class="nhsuk-label nhsuk-checkboxes__label" for="conditions-7">
-                  Heart Disease
+                  By post
                 </label>
-              </div>
-              <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="conditions-8" name="condition" type="checkbox" value="High blood pressure"{{ checked("condition", "High blood pressure") }}>
-                <label class="nhsuk-label nhsuk-checkboxes__label" for="conditions-8">
-                  High blood pressure
-                </label>
-              </div>
             </div>
           </fieldset>
         </div>

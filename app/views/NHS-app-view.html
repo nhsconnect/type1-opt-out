@@ -1,0 +1,224 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+
+      <!-- Change the page title here -->
+      <h1>
+        Your health
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+
+      <article>
+        <h2 class="nhsuk-u-visually-hidden">Top actions for the team</h2>
+  
+        <ul class="nhsuk-grid-row nhsuk-card-group">
+  
+          <!-- NHS COVID Pass -->
+          <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable ">
+              <div class="nhsuk-card__content beta-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="#">
+                    NHS COVID Pass
+                  </a>
+                </h2>
+                <div class="nhsuk-card__description"><p>View and download your COVID Pass for travel abroad</p></div>
+                <div class="beta-hub-arrow">
+                  <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""/><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"/><path data-name="Path" d="M11.667 9.229L15.438 13"/></g></svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Check your COVID-19 vaccine recor -->
+          <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable ">
+              <div class="nhsuk-card__content beta-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="#">
+                    Check your COVID-19 vaccine record
+                  </a>
+                </h2>
+                <div class="nhsuk-card__description"><p>View your vaccination details, like your name and batch number, and report any side effects you have experienced</p></div>
+                <div class="beta-hub-arrow">
+                  <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""/><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"/><path data-name="Path" d="M11.667 9.229L15.438 13"/></g></svg>
+                </div>
+              </div>
+            </div>
+          </li>
+  
+          <!-- GP health record -->
+          <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable ">
+              <div class="nhsuk-card__content beta-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="#">
+                    GP health record
+                  </a>
+                </h2>
+                <div class="nhsuk-card__description"><p>View allergies, medicines, test results and more in your GP health record</p></div>
+                <div class="beta-hub-arrow">
+                  <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""/><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"/><path data-name="Path" d="M11.667 9.229L15.438 13"/></g></svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Test results and imaging -->
+          <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable ">
+              <div class="nhsuk-card__content beta-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="#">
+                    Test results and imaging
+                  </a>
+                </h2>
+                <div class="nhsuk-card__description"><p>View test results and imaging from your hospital or other care provider, or add your own</p></div>
+                <div class="beta-hub-arrow">
+                  <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""/><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"/><path data-name="Path" d="M11.667 9.229L15.438 13"/></g></svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Care plans -->
+          <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable ">
+              <div class="nhsuk-card__content beta-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="#">
+                    Care plans
+                  </a>
+                </h2>
+                <div class="nhsuk-card__description"><p>View your care plans from your hospital or other care provider, or add your own</p></div>
+                <div class="beta-hub-arrow">
+                  <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""/><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"/><path data-name="Path" d="M11.667 9.229L15.438 13"/></g></svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Track your health -->
+          <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable ">
+              <div class="nhsuk-card__content beta-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="#">
+                    Track your health
+                  </a>
+                </h2>
+                <div class="nhsuk-card__description"><p>Record symptoms and add to your health journal</p></div>
+                <div class="beta-hub-arrow">
+                  <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""/><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"/><path data-name="Path" d="M11.667 9.229L15.438 13"/></g></svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Shared health links -->
+          <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable ">
+              <div class="nhsuk-card__content beta-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="#">
+                    Shared health links
+                  </a>
+                </h2>
+                <div class="nhsuk-card__description"><p>View links your doctor or helth professional has shared with you</p></div>
+                <div class="beta-hub-arrow">
+                  <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""/><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"/><path data-name="Path" d="M11.667 9.229L15.438 13"/></g></svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Record sharing -->
+          <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable ">
+              <div class="nhsuk-card__content beta-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="#">
+                    Record sharing
+                  </a>
+                </h2>
+                <div class="nhsuk-card__description"><p>Choose and manage information you share with your health teams</p></div>
+                <div class="beta-hub-arrow">
+                  <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""/><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"/><path data-name="Path" d="M11.667 9.229L15.438 13"/></g></svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Manage your organ donation decision -->
+          <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable ">
+              <div class="nhsuk-card__content beta-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="#">
+                    Manage your organ donation decision
+                  </a>
+                </h2>
+                <div class="nhsuk-card__description"><p>Help save thousands of lives in the UK every year by signing up to become a donor on the NHS Organ Donor Register</p></div>
+                <div class="beta-hub-arrow">
+                  <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""/><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"/><path data-name="Path" d="M11.667 9.229L15.438 13"/></g></svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Choose if data from your health records is shared for research and planning -->
+          <li class="beta-hub-main-topic nhsuk-grid-column-one-half nhsuk-card-group__item">
+            <div class="nhsuk-card nhsuk-card--clickable ">
+              <div class="nhsuk-card__content beta-card__content">
+                <h2 class="nhsuk-card__heading nhsuk-heading-m">
+                  <a class="nhsuk-card__link" href="nhsuk-opt-out-of-sharing">
+                    Choose if data from your health records is shared for research and planning
+                  </a>
+                </h2>
+                <div class="nhsuk-card__description"><p>Find out how the NHS uses your confidential patient information and choose whether or not it can be used for research and planning</p></div>
+                <div class="beta-hub-arrow">
+                  <svg class="nhsuk-icon beta-icon__chevron-right-circle" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true"><circle cx="13.333" cy="13.333" r="13.333" fill=""/><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"/><path data-name="Path" d="M11.667 9.229L15.438 13"/></g></svg>
+                </div>
+              </div>
+            </div>
+          </li>
+            
+      </article>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

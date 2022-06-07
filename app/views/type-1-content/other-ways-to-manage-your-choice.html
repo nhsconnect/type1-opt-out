@@ -1,0 +1,276 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Type 1 Online service - Overview
+{% endblock %}
+
+{% block headCSS %}
+  <link href="/css/main.css" rel="stylesheet">
+  <link href="/css/nhsuk.css" rel="stylesheet">
+{% endblock %}
+
+<!-- NHS.UK header -->
+{% block header %}
+<header class="nhsuk-header" role="banner">
+  <div class="nhsuk-width-container nhsuk-header__container">
+    <div class="nhsuk-header__logo">
+      <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
+        <svg class="nhsuk-logo nhsuk-logo--white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16">
+          <path fill="#fff" d="M0 0h40v16H0z"></path>
+          <path fill="#005eb8" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="nhsuk-header__content" id="content-header">
+      <div class="nhsuk-header__menu">
+        <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-expanded="false">Menu</button>
+      </div>
+      <div class="nhsuk-header__search">
+        <div class="nhsuk-header__search-wrap beta-header__search-wrap js-show" id="wrap-search">
+          <form class="nhsuk-header__search-form beta-header__search-form" id="search" action="https://www.nhs.uk/search/" method="get" role="search">
+            <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
+            <div class="autocomplete-container" id="autocomplete-container"></div>
+            <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off" >
+            <button class="nhsuk-search__submit beta-search__submit" type="submit">
+              <svg class="nhsuk-icon nhsuk-icon__search beta-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
+              </svg>
+              <span class="nhsuk-u-visually-hidden">Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+    <div class="nhsuk-width-container">
+      <p class="nhsuk-header__navigation-title"><span id="label-navigation">Menu</span>
+        <button class="nhsuk-header__navigation-close" id="close-menu">
+          <svg class="nhsuk-icon nhsuk-icon__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M13.41 12l5.3-5.29a1 1 0 1 0-1.42-1.42L12 10.59l-5.29-5.3a1 1 0 0 0-1.42 1.42l5.3 5.29-5.3 5.29a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l5.29-5.3 5.29 5.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42z"></path>
+          </svg>
+          <span class="nhsuk-u-visually-hidden">Close menu</span>
+        </button>
+      </p>
+      <ul class="nhsuk-header__navigation-list">
+        <li class="nhsuk-header__navigation-item nhsuk-header__navigation-item--for-mobile">
+          <a class="nhsuk-header__navigation-link" href="">
+            Home
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="">
+            Health A-Z
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="">
+            Live Well
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="">
+            Mental health
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="">
+            Care and support
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="">
+            Pregnancy
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+        <li class="nhsuk-header__navigation-item">
+          <a class="nhsuk-header__navigation-link" href="">
+            NHS services
+            <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+{% endblock %}
+
+{% block beforeContent %}
+<!-- Coronavirus (COVID-19) banner -->
+<div class="app-global-alert" id="app-global-alert" role="complementary">
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <div class="app-global-alert__content">
+          <div class="app-global-alert__message">
+            <h2>Coronavirus (COVID-19)</h2>
+            <p><a href="">Get the latest advice about COVID-19</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Breadcrumbs -->
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a href="https://www.nhs.uk/" class="nhsuk-breadcrumb__link">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a href="overview" class="nhsuk-breadcrumb__link">Choose if your GP medical records is shared for research and planning</a></li>
+      <li class="nhsuk-breadcrumb__item"><a href="make-your-choice" class="nhsuk-breadcrumb__link">Make your choice</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a href="" class="nhsuk-breadcrumb__backlink">Back to Health A to Z</a>
+    </p>
+  </div>
+</nav>
+{% endblock %}
+
+
+<!-- Social care and support guide content -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <div class="nhsuk-u-reading-width">
+      <h1>Other ways to make a choice about sharing your GP data</h1>
+      <p class="nhsuk-lede-text">
+        Find other ways to choose if your personally identifiable patient data can be shared outside your GP practice for purposes except your own care to support health and care planning and research.
+      </p>
+    </div>
+
+    <p>
+      You can make or change a choice for:
+    </p>
+    <ul class="nhsuk-list nhsuk-list--bullet">
+      <li>yourself</li>
+      <li>children under the age of 13</li>
+      <li>someone you can legally make decisions for</li>
+    </ul>
+      <p>
+        Download and complete this form and email or post it to your GP practice. 
+      </p>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-quarter nhsuk-u-one-querter-tablet">
+          <a class="app-download__link" href="https://assets.nhs.uk/nhsuk-cms/documents/Type1Opt-outform.docx">
+            <img class="app-download__thumbnail" height="150" alt="" src="https://assets.nhs.uk/nhsuk-cms/images/nhs-1.height-300.png">
+          </a>
+        </div>
+        <div class="nhsuk-grid-column-three-quesrters nhsuk-u-two-thirds-tablet">
+          <ul class="nhsuk-list">
+            <li><a href="https://assets.nhs.uk/nhsuk-cms/documents/Type1Opt-outform.docx">Type 1 Opt-out form.docx (32kB)</a></li>
+            <li>Published: 19 May 2021</li>
+            <li>Last updated: 19 May 2021</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>
+        If you are filling in this form on behalf of a dependent e.g. a child, the GP practice will first check that you have the authority to do so.
+      </p>
+
+      <p>
+        <a href="#">NHS Digital's privacy notice</a> explains how your data is used to apply your choice.
+      </p>
+
+      <div class="nhsuk-do-dont-list">
+        <h3 class="nhsuk-do-dont-list__label">Make or change a choice for an adult</h3>
+        <p>
+          To make and manage a choice on behalf of someone else, you must be one of the following to the person:
+        </p>
+        <ul class="nhsuk-list nhsuk-list--tick">
+          <li>
+            <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+              <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+            </svg>
+            health and welfare lasting power of attorney
+          </li>
+          <li>
+            <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+              <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+            </svg>
+            property and financial affairs lasting power of attorney
+          </li>
+          <li>
+            <svg class="nhsuk-icon nhsuk-icon__tick" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true" width="34" height="34">
+              <path stroke-width="4" stroke-linecap="round" d="M18.4 7.8l-8.5 8.4L5.6 12" stroke="#007f3b"></path>
+            </svg>
+            Court of Protection deputy
+          </li>
+        </ul>
+      </div>
+      
+
+    <!-- Navigation -->
+    <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+      <ul class="nhsuk-list nhsuk-pagination__list">
+        <li class="nhsuk-pagination-item--previous">
+          <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="/type-1-content/make-your-choice">
+            <span class="nhsuk-pagination__title">Previous</span>
+            <span class="nhsuk-u-visually-hidden">:</span>
+            <span class="nhsuk-pagination__page">Make your choice</span>
+            <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+              <path d="M4.1 12.3l2.7 3c.2.2.5.2.7 0 .1-.1.1-.2.1-.3v-2h11c.6 0 1-.4 1-1s-.4-1-1-1h-11V9c0-.2-.1-.4-.3-.5h-.2c-.1 0-.3.1-.4.2l-2.7 3c0 .2 0 .4.1.6z"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+{% endblock %}
+
+
+<!-- NHS.UK footer -->
+{% block footer %}
+<footer role="contentinfo">
+  <div class="nhsuk-footer" id="nhsuk-footer">
+    <div class="nhsuk-width-container">
+      <h2 class="nhsuk-u-visually-hidden">Support links</h2>
+      <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
+        <li class="nhsuk-footer__list-item"><a href="" class="nhsuk-footer__list-item-link">NHS sites</a></li>
+        <li class="nhsuk-footer__list-item"><a href="" class="nhsuk-footer__list-item-link">NHS App</a></li>
+        <li class="nhsuk-footer__list-item"><a href="" class="nhsuk-footer__list-item-link">About us</a></li>
+        <li class="nhsuk-footer__list-item"><a href="" class="nhsuk-footer__list-item-link">Contact us</a></li>
+        <li class="nhsuk-footer__list-item"><a href="" class="nhsuk-footer__list-item-link">Profile editor login</a></li>
+        <li class="nhsuk-footer__list-item"><a href="" class="nhsuk-footer__list-item-link">Site map</a></li>
+        <li class="nhsuk-footer__list-item"><a href="" class="nhsuk-footer__list-item-link">Accessibility statement</a></li>
+        <li class="nhsuk-footer__list-item"><a href="" class="nhsuk-footer__list-item-link">Our policies</a></li>
+        <li class="nhsuk-footer__list-item"><a href="" class="nhsuk-footer__list-item-link">Cookies</a></li>
+      </ul>
+      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}
+
+
+<!-- JavaScript hack to do nothing if search button or link href="" clicked -->
+{% block pageScripts %}
+<script>
+  $( document ).ready(function() {
+    $('a[href=""], button.nhsuk-search__submit').click(function(e) {
+      e.preventDefault();
+    });
+  });
+</script>
+{% endblock %}
