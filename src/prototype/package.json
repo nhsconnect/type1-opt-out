@@ -1,7 +1,7 @@
 {
-  "name": "nhsuk-prototype-kit",
+  "name": "type1-opt-out",
   "version": "4.8.0",
-  "description": "Rapidly create HTML prototypes of NHS websites and services.",
+  "description": "NHS Digital Type 1 Opt-outs",
   "main": "app.js",
   "scripts": {
     "build": "gulp build",
