@@ -4,6 +4,7 @@
 /dist
 /tmp
 /public
+dist/
 
 # Runtime data
 pids
@@ -62,3 +63,4 @@ jspm_packages/
 # System Files
 .DS_Store
 Thumbs.db
+*Zone.Identifier

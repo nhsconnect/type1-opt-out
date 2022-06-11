@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Type 1 Opt-Out - Test Data
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+    {
+      text: "Home",
+      href: "/"
+    },
+    {
+      text: "Configuration",
+      href: "/landing-page-config"
+    }
+  ],
+  href: "/landing-page-config-test-data",
+  text: "Test Data"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Test Data
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/landing-page-patients",
+            text: "Patients"
+          },
+          {
+            href: "/landing-page-practices",
+            text: "Practices"
+          },
+          {
+            href: "/landing-page-system-suppliers",
+            text: "System Suppliers"
+          }
+        ]
+      }) }}
+    </div>
+  </div>
+{% endblock %}
