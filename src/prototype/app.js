@@ -148,6 +148,8 @@ documentationApp.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/packages')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/dist')));
+app.use('/', express.static(path.join(__dirname, '..', 'frontend/dist')));
+app.use('/', express.static(path.join(__dirname, '..', 'config/dist')));
 
 // Check if the app is documentation only
 if (onlyDocumentation === 'true') {
