@@ -10,17 +10,20 @@
     - add custom CSS and JavaScript
 -->
 
-<!-- Set the page title -->
 {% block pageTitle %}
-  NHS.UK prototype kit
+  Type 1 Opt-Out Prototype
 {% endblock %}
 
-<!-- For adding a breadcrumb -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
   {{ breadcrumb({
-    href: "/",
-    text: "Home"
+    items: [
+    {
+      text: "Home",
+      href: "/"
+    }
+  ],
+  text: "Prototype",
+  href: "/landing-page-prototype"
   }) }}
 {% endblock %}
 
@@ -37,8 +40,7 @@
 
       <!-- Change the page title here -->
       <h1>
-        NHS.UK prototype kit
-        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version {{version}}</span>
+        Type 1 Opt-Out
       </h1>
 
       <!-- Add your content here -->
