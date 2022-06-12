@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Type 1 Opt-Out - Test Data
+  Type 1 Opt-Out - Configuration
 {% endblock %}
 
 {% block beforeContent %}
@@ -10,14 +10,10 @@
     {
       text: "Home",
       href: "/"
-    },
-    {
-      text: "Configuration",
-      href: "/landing-page-config"
     }
   ],
-  href: "/landing-page-config-test-data",
-  text: "Test Data"
+  text: "Configuration",
+  href: "/landing-page-config"
   }) }}
 {% endblock %}
 
@@ -26,22 +22,22 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>
-        Test Data
+        Configuration
       </h1>
 
       {{ contentsList({
         items: [
           {
-            href: "/landing-page-patients",
-            text: "Patients"
+            href: "/landing-page-config-app",
+            text: "Application"
           },
           {
-            href: "/landing-page-practices",
-            text: "Practices"
+            href: "/landing-page-config-content",
+            text: "Content"
           },
           {
-            href: "/landing-page-system-suppliers",
-            text: "System Suppliers"
+            href: "/config/test-data",
+            text: "Test Data"
           }
         ]
       }) }}
