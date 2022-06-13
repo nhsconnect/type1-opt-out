@@ -15,6 +15,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "prototype": "^4.8.0",
     "react-dom": "^18.1.0"
   }
 }
