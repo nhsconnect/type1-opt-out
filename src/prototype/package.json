@@ -1,11 +1,10 @@
 {
-  "name": "type1-opt-out",
+  "name": "prototype",
   "version": "4.8.0",
-  "description": "NHS Digital Type 1 Opt-outs",
+  "description": "Type 1 Opt-out prototype",
   "main": "app.js",
   "scripts": {
     "build": "gulp build",
-    "postinstall": "npm run build",
     "start": "node app.js",
     "test": "",
     "prewatch": "gulp build",
@@ -32,10 +31,9 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^5.0.0",
     "keypather": "^3.0.0",
-    "nhsuk-frontend": "^6.1.0",
+    "nhsuk-frontend": "^6.1.1",
     "nunjucks": "^3.2.3",
-    "path": "^0.12.7",
-    "sass": "^1.44.0"
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
