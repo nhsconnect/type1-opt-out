@@ -1,7 +1,7 @@
 {
-  "name": "type1-opt-out",
+  "name": "prototype",
   "version": "4.8.0",
-  "description": "NHS Digital Type 1 Opt-outs",
+  "description": "Type 1 Opt-out prototype",
   "main": "app.js",
   "scripts": {
     "build": "gulp build",
