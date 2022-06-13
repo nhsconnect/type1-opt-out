@@ -25,8 +25,9 @@ sass.compiler = require('sass');
 // Compile SASS to CSS
 function compileStyles() {
   return gulp.src([
-    'app/assets/sass/**/*.scss',
-    'docs/assets/sass/**/*.scss'
+    // 'app/assets/sass/**/*.scss',
+    'app/assets/sass/main.scss',
+    'docs/assets/sass/docs.scss'
   ])
     .pipe(sass())
     .pipe(gulp.dest('public/css'))
