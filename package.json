@@ -10,9 +10,9 @@
   "author": "",
   "license": "ISC",
   "workspaces":[
-    "prototype",
-    "frontend",
-    "backend",
-    "config"
+    "src/prototype",
+    "src/frontend",
+    "src/backend",
+    "src/config"
   ]
 }
