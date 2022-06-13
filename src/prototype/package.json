@@ -33,8 +33,7 @@
     "keypather": "^3.0.0",
     "nhsuk-frontend": "^6.1.1",
     "nunjucks": "^3.2.3",
-    "path": "^0.12.7",
-    "prototype": "^4.8.0"
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
