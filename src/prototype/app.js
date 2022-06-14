@@ -45,7 +45,7 @@ app.locals.serviceName = config.serviceName;
 // Nunjucks configuration for application
 const appViews = [
   path.join(__dirname, 'app/views/'),
-  path.join(__dirname, 'node_modules/nhsuk-frontend/packages/components'),
+  path.join(__dirname, 'app/assets/sass/components'),
   path.join(__dirname, 'docs/views/'),
 ];
 

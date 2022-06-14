@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gulp build",
     "start": "node app.js",
-    "test": "",
+    "test": "jest --detectOpenHandles",
     "prewatch": "gulp build",
     "watch": "gulp",
     "lint:js": "eslint -c ./linters/.eslintrc.js app.js middleware/**/*.js lib/**/*.js app/*.js docs/*.js"
@@ -39,6 +39,8 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.24.1"
+    "eslint-plugin-import": "^2.24.1",
+    "regenerator-runtime": "^0.13.9",
+    "supertest": "^6.2.3"
   }
 }
