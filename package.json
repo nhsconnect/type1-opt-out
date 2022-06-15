@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No root level unit tests\""
+    "test": "echo \"No root level unit tests\"",
+    "build": "npm run build -ws",
+    "start": "node src/prototype/app.js",
+    "watch": "npm run watch -w prototype"
   },
   "keywords": [],
   "author": "",
