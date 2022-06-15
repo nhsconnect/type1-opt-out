@@ -1,6 +1,7 @@
 # compiled output
 tmp/
 public/
+# dist/
 
 # Runtime data
 pids

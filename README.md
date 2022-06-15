@@ -16,14 +16,25 @@ To prevent members of the public finding this prototype and thinking it is a liv
 <a href="https://type1-opt-out-release-1.herokuapp.com/">Current stable release for testing</a>
 
 ## Installation instructions
+These are the steps for installing the project on Ubuntu. Please adjust as necessary for your platform.
 
-### Requirements
+Install NVM
+- sudo apt install curl -y
+- curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
+- source ~/.profile  
 
-node.js - LTS version 8 or higher
+Install node
+- nvm install node
 
-### Install dependencies
+Clone the Type 1 Opt-out repository GitHub
+If necessary, install git
+- sudo apt install git
+- git clone https://github.com/nhsconnect/type1-opt-out.git
 
-npm install
+Install NPM packages
+- cd ~type1-opt-out
+- npm install
+- npm install -ws
 
 ### Run the application
 
