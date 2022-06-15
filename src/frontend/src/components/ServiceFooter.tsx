@@ -8,7 +8,7 @@ const ServiceFooter: React.FC = () => (
                 Home
             </Footer.ListItem>
             <Footer.ListItem
-                href="/"
+                href="/accessibility-statement"
                 target="_blank"
                 rel="noopener noreferrer"
             >
