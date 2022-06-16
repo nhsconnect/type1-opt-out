@@ -17,7 +17,7 @@ build-f:
 build-%:
 	npm run build -w $*
 
-test-all:
+test:
 	npm test -ws
 	
 test-p:
@@ -26,7 +26,6 @@ test-p:
 
 test-%:
 	npm test -w $*
-	
 
 start:
 	PORT=3000 node src/prototype/app.js > /dev/null 2>&1 &
