@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No root level unit tests\"",
+    "test": "npm test -ws",
     "build": "npm run build -ws",
     "start": "node src/prototype/app.js",
     "watch": "npm run watch -w prototype"
@@ -22,7 +22,8 @@
     "nhsuk-frontend": "^6.1.1",
     "nhsuk-react-components": "^2.1.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^8.13.0",

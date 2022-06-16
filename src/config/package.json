@@ -10,12 +10,8 @@
   "license": "ISC",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && mv dist/index.html dist/config_index.html",
+    "build": "tsc && vite build",
     "test": "jest",
     "preview": "vite preview"
-  },
-  "dependencies": {
-    "prototype": "^4.8.0",
-    "react-dom": "^18.1.0"
   }
 }
