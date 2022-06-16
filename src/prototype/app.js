@@ -148,8 +148,8 @@ documentationApp.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/packages')));
 app.use('/nhsuk-frontend', express.static(path.join(__dirname, 'node_modules/nhsuk-frontend/dist')));
-app.use('/', express.static(path.join(__dirname, '..', 'frontend/dist')));
-app.use('/', express.static(path.join(__dirname, '..', 'config/dist')));
+app.use('/frontend', express.static(path.join(__dirname, '..', 'frontend', 'dist')));
+app.use('/config', express.static(path.join(__dirname, '..', 'config', 'dist')));
 
 // Check if the app is documentation only
 if (onlyDocumentation === 'true') {
@@ -158,6 +158,14 @@ if (onlyDocumentation === 'true') {
     res.redirect('/docs');
   });
 }
+
+app.get('/frontend/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'frontend','dist', 'index.html'));
+})
+
+app.get('/config/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'config','dist', 'index.html'));
+})
 
 // Use custom application routes
 app.use('/', routes);
@@ -234,6 +242,9 @@ app.use((err, req, res) => {
 });
 
 // Run the application
-app.listen(port);
-
+// app.listen(port);
+app.listen(port, (err) => {
+  if (err) return console.log(err);
+  console.log('Server running on port ', port);
+})
 module.exports = app;

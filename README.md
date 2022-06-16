@@ -18,8 +18,10 @@ To prevent members of the public finding this prototype and thinking it is a liv
 ## Installation instructions
 These are the steps for installing the project on Ubuntu. Please adjust as necessary for your platform.
 
+Install packages
+- sudo apt install curl make -y
+
 Install NVM
-- sudo apt install curl -y
 - curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash 
 - source ~/.profile  
 
@@ -36,10 +38,20 @@ Install NPM packages
 - npm install
 - npm install -ws
 
-### Run the application
+### Run the application locally
 
-npm run watch
-Go to localhost:3000 in your browser.
+- npm run watch
+- Go to localhost:3000 in your browser.
+
+## Deployment
+
+- Make build-all
+- Make test-all
+
+Push your branch to GitHub
+Merge your branch into the develop branch
+
+Once merged, the develop branch will automatically be deployed to Heroku (<a href="https://type1-opt-out-develop.herokuapp.com/">Heroku Type 1 Opt-Out Development instance</a>)
 
 ## Contribute
 

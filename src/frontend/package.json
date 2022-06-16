@@ -2,7 +2,7 @@
   "name": "frontend",
   "description": "Type 1 Opt-Out frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1",
   "type": "module",
   "main": "index.js",
   "keywords": [],
@@ -10,12 +10,8 @@
   "license": "ISC",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && mv dist/index.html dist/frontend_index.html",
+    "build": "tsc && vite build",
     "test": "jest",
     "preview": "vite preview"
-  },
-  "dependencies": {
-    "prototype": "^4.8.0",
-    "react-dom": "^18.1.0"
   }
 }
