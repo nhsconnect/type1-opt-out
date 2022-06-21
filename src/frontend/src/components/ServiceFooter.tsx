@@ -4,11 +4,11 @@ import React from "react";
 const ServiceFooter: React.FC = () => (
     <Footer>
         <Footer.List>
-            <Footer.ListItem href="/">
+            <Footer.ListItem href="/frontend">
                 Home
             </Footer.ListItem>
             <Footer.ListItem
-                href="/"
+                href="/frontend/accessibility-statement"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -46,6 +46,9 @@ const ServiceFooter: React.FC = () => (
                 <span className="nhsuk-u-visually-hidden">
                     Opens in new window
                 </span>
+            </Footer.ListItem>
+            <Footer.ListItem href="/">
+                Environments
             </Footer.ListItem>
         </Footer.List>
         <Footer.Copyright>NHS Digital 2022</Footer.Copyright>
