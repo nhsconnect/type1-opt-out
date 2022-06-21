@@ -1,31 +1,41 @@
 import './App.scss'
+import Home from './components/Home';
 
 import ServiceFooter from './components/ServiceFooter';
 import ServiceHeader from './components/ServiceHeader';
 import reactLogo from './assets/react.svg'
 import { useState } from 'react'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import Patients from './components/Patients';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <ServiceHeader />
+    <Router>
+      
       <div className="App">
+      <ServiceHeader />
         <div>
-          <a href="https://reactjs.org" target="_blank">
-            <img src={reactLogo} className="logo" alt="React logo" />
-          </a>
-        </div>
-        <h1 className="nhsuk-heading-l">Type 1 Opt-Out</h1>
-        <h1 className="nhsuk-heading-l">Configuration</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-        </div>
+          <Switch>
+            <Route exact path="/config_index.html">
+             <Patients />
+            
+            </Route>
+            <Route exact path = "/config/patientsop" component={Patients}>
+              <Patients />
+            </Route>
+          </Switch>
+         
+        
       </div>
       <ServiceFooter />
+      </div>
+    
+      
+      </Router>
+      
     </>
   )
 }

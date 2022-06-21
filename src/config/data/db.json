@@ -1,0 +1,19 @@
+{
+    "patients": 
+    [
+        {
+            "nhs_number" : "787879584043",
+            "first_name" : "Tony",
+            "last_name"  : "Smith",
+            "post_code" : "Ty9 3AW",
+            "date_of_birth" : "2000-01-10"
+        },
+        {
+            "nhs_number" : "8393817272",
+            "first_name" : "Sarah",
+            "last_name"  : "Wembly",
+            "post_code" : "UB8 2AW",
+            "date_of_birth" : "1960-03-19"        
+        }
+    ] 
+}
