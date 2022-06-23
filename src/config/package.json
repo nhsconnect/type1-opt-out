@@ -1,6 +1,6 @@
 {
   "name": "config",
-  "description": "Type 1 Opt-Out configuration module",
+  "description": "Type 1 Opt-Out configuration",
   "private": true,
   "version": "0.0.0",
   "type": "module",
