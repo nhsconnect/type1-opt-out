@@ -30,14 +30,15 @@ test-%:
 	npm test -w $*
 
 start:
-	@echo 'Started frontend server on port 3000. http://localhost:3000'
+	@echo 'Started frontend node.js server on port 3000. http://localhost:3000'
 	@PORT=3000 node src/prototype/app.js > /dev/null 2>&1 &
 
 watch:
+# start prototype and continually watch for code changes
 	npm run watch -w prototype
 	
 stop:
 	@kill -9 $$(ps -aux | grep '[n]ode src/prototype/app.js' | awk '{print $$2}')
-	@echo 'Server stopped'
+	@echo 'Frontend node.js Server stopped'
 	
 restart: stop start
