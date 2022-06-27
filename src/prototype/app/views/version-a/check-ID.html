@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Type 1 Online Option
+{% endblock %}
+
+{% block beforeContent %}
+<!-- Breadcrumbs -->
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link">Choose if your GP medical records is shared for research and planning</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a href="" class="nhsuk-breadcrumb__backlink">Back to Health A to Z</a>
+    </p>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-full">
+    <div class="nhsuk-width-container">
+      <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+
+      <div class="callout callout--interruption alt">
+        <div class="grid-row">
+          <div class="column--three-quarters tablet">
+            <h1 class="h2">We need to check who you are before you can make your choice</h1>
+            <div class="reading-width">
+              <p>We'll need your:</p>
+              <p>
+                <ul>
+                  <li>
+                    name
+                  </li>
+                  <li>
+                    date of birth
+                  </li>
+                  <li>
+                    postcode or NHS number"
+                  </li>
+                </ul>
+              </p>
+
+              <p>
+                We'll use these details to find your contact details from your health records so we can send you a security code.
+              </p>
+
+              <a class="nhsuk-button" href="/version-a/wizard/passing-data-question-name" class="button">Continue</a>
+
+              <p>
+                <a id="privacyNoticeLink" target="_blank" rel="noopener noreferrer" href="#"><!-- react-text: 44 -->How your data will be processed using this service<!-- /react-text --><span class="util-visuallyhidden"> - Page opens in new window</span></a>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </main>
+   </div>  
+  </div>
+</div>
+{% endblock %}

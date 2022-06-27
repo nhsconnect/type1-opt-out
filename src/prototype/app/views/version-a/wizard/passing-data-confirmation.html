@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Confirmation - passing data from page to page
+{% endblock %}
+
+{% block beforeContent %}
+<!-- Breadcrumbs -->
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link">Choose if your GP medical records is shared for research and planning</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a href="" class="nhsuk-breadcrumb__backlink">Back to Health A to Z</a>
+    </p>
+  </div>
+</nav>
+{% endblock %}
+
+{% block main %}
+  <div class="nhsuk-width-container">
+    <main class="nhsuk-main-wrapper nhsuk-main-wrapper--s" id="maincontent" role="main">
+
+    {% block content %}
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+
+          <div class="nhsuk-card nhsuk-card--confirmation nhsuk-u-margin-bottom-4">
+
+              <h1 class="nhsuk-card__title">
+                Application complete
+              </h1>
+
+              <div class="nhsuk-card__body">
+                Your reference number
+                <br>
+                <strong>HDJ2123F</strong>
+              </div>
+
+            </div>
+
+            <p>
+              We have sent you a confirmation email.
+            </p>
+
+        </div>
+      </div>
+    {% endblock %}
+
+  </main>
+</div>
+{% endblock %}
+
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/docs",
+        "label": "Home"
+      },
+      {
+        "URL": "/version-a/wizard/clear-data",
+        "label": "Clear data"
+      },
+      {
+        "URL": "/docs/about",
+        "label": "About and support"
+      },
+      {
+        "URL": "https://github.com/nhsuk/nhsuk-prototype-kit",
+        "label": "NHS.UK prototype kit - GitHub"
+      }
+    ]
+  })}}
+{% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Type 1 Online service - Overview
+  Social care and support guide - NHS
 {% endblock %}
 
 {% block headCSS %}
@@ -116,29 +116,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-<!-- Coronavirus (COVID-19) banner -->
-<div class="app-global-alert" id="app-global-alert" role="complementary">
-  <div class="nhsuk-width-container">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full">
-        <div class="app-global-alert__content">
-          <div class="app-global-alert__message">
-            <h2>Coronavirus (COVID-19)</h2>
-            <p><a href="">Get the latest advice about COVID-19</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- Breadcrumbs -->
 <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a href="https://www.nhs.uk/" class="nhsuk-breadcrumb__link">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a href="" class="nhsuk-breadcrumb__link">Home</a></li>
+      <li class="nhsuk-breadcrumb__item"><a href="" class="nhsuk-breadcrumb__link">Services</a></li>
+      <li class="nhsuk-breadcrumb__item"><a href="" class="nhsuk-breadcrumb__link">About the NHS</a></li>
     </ol>
     <p class="nhsuk-breadcrumb__back">
-      <a href="" class="nhsuk-breadcrumb__backlink">Back to Health A to Z</a>
+      <a href="" class="nhsuk-breadcrumb__backlink">Back to About the NHS</a>
     </p>
   </div>
 </nav>
@@ -152,121 +139,87 @@
   <div class="nhsuk-grid-column-two-thirds">
 
     <div class="nhsuk-u-reading-width">
-      <h1>Choose if your GP medical records is shared for research and planning</h1>
-      <p class="nhsuk-lede-text">
-        Choose if your personally identifiable patient data can be shared outside your GP practice for purposes except your own care to support health and care planning and research.
+      <h1>Opt out of sharing your health records</h1>
+      <h2>Why your data is important</h2>
+      <p>
+        The NHS uses information about patients (patient data) to research, plan and improve:
       </p>
+      <ul>
+        <li>the services we offer</li>
+        <li>the treatment and care patients receive</li>
+      </ul>
+      <p>
+        We get this data from your GP surgery, hospitals and other healthcare providers. The organisation that collects your data is called <a href="https://digital.nhs.uk/about-nhs-digital/">NHS Digital</a>.
+      </p>
+      <p>
+        To help improve services, NHS Digital shares this data with researchers from organisations such as universities or hospitals. This type of data-sharing has been happening for many years.
+      </p>
+      <p>
+        All data that is collected and shared is protected by strict rules around privacy, confidentiality and security.
+      </p>
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>We never sell patient data or share it with insurance or marketing companies.</p>
+      </div>
+      <p>
+        Find out more about how NHS Digital is <a href="https://digital.nhs.uk/your-data">looking after your data</a>.
+      </p>
+
+      <h2>Opting out of sharing your data</h2>
+      <p>
+        You can choose whether or not your data is used for research and planning. There are different types of data-sharing you can opt out of.
+      </p>
+      
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Choose if your GP medical records is shared for research and planning
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>This is called the 'Type 1 Opt-out'.</p>
+          <p>If you choose this opt-out, the data held in your GP medical records won't be shared with other healthcare professionals for the purposes of your individual care. It is also shared with other organisations to support health and care planning and research;</p>
+          <p>To opt out online, check if you have opted out or find out more, visit the <a href="/version-a/type-1-content/overview">Type 1 Opt-out service page</a>; or check your settings in the <a href="https://www.nhs.uk/nhs-app/">NHS App</a>.</p>
+          <p>If you choose a <a href="/version-a/type-1-content/overview">Type 1 Opt-out</a>, your GP will not share your data for research and planning. However, NHS Digital will still be able to collect and share data from other healthcare providers, such as hospitals.</p>
+        </div>
+      </details>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Choose if NHS Digital and other health and care organisations can share your data for research and planning
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>This is called the 'National Data Opt-out'.</p>
+          <ul>
+            <li>To opt out online or find out more, visit the <a href="https://www.nhs.uk/your-nhs-data-matters">National Data Opt-Out service page</a>.</li>
+            <li>If you choose this opt-out, NHS Digital and other health and care organisations will not be able to share any of your personal data with other organisations for research and planning, except in certain situations. For example, when required by law.</li>
+            <li>If you want to check if you have opted out, you can enter your details again visiting the <a href="https://www.nhs.uk/your-nhs-data-matters">National Data Opt-Out service</a> or check your settings in the <a href="https://www.nhs.uk/nhs-app/">NHS App</a>.</li>
+          </ul>
+          <p>If you choose a Type 1 Opt-out, your GP will not share your data for research and planning. However, NHS Digital will still be able to collect and share data from other healthcare providers, such as hospitals.</p>
+      
+        </div>
+      </details>
+
+      <p>
+        You can opt out, or opt back in again, at any time.
+      </p>
+
+      <div class="nhsuk-do-dont-list">
+        <h3 class="nhsuk-do-dont-list__label">Data used for your care</h3>
+        <ul class="nhsuk-list nhsuk-list--tick">
+          <p>
+            If you choose to opt out of sharing your data, your personal health information will still be used to make sure you get the treatment and care you need. For example, your data may be shared so that you can be referred to hospital or get a prescription.
+          </p>
+        </ul>
+      </div>
+
     </div>
 
-    <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
-      <h2 class="nhsuk-u-visually-hidden">Contents</h2>
-      <ol class="nhsuk-contents-list__list">
-        <li class="nhsuk-contents-list__item" aria-current="page">
-          <span class="nhsuk-contents-list__current">Overview</span>
-        </li>
-        <li class="nhsuk-contents-list__item">
-          <a class="nhsuk-contents-list__link" href="/type-1-content/how-confidential-patient">How confidential patient information is used</a>
-        </li>
-        <li class="nhsuk-contents-list__item">
-          <a class="nhsuk-contents-list__link" href="/type-1-content/when-your-choice-does-not-apply">When your choice does not apply</a>
-        </li>
-        <li class="nhsuk-contents-list__item">
-          <a class="nhsuk-contents-list__link" href="/type-1-content/make-your-choice">Make your choice</a>
-        </li>
-      </ol>
-    </nav>
+  </div>
+</div>
 
-    <p>
-      Your health records contain a type of data called confidential patient information. This data can be used to help with research and planning.
-    </p>
-    <p>
-      You can choose to stop your confidential patient information being used for research and planning. You can also make a choice for someone else like your children under the age of 13.
-    </p>
-    <p>
-      Your choice will only apply to the health and care system in England. This does not apply to health or care services accessed in Scotland, Wales or Northern Ireland.
-    </p>
-    <p>
-      This information is also available in <a href="" title="Other languages and formats"></a>other languages and formats.
-    </p>
-
-    <div class="nhsuk-inset-text">
-      <span class="nhsuk-u-visually-hidden">Coronavirus update: </span>
-      <h2>
-        Coronavirus update
-      </h2>
-      <p>
-        To help the NHS respond to coronavirus, your information may be used for coronavirus research purposes even if you have chosen not to share it. Any information used will be shared appropriately and lawfully.
-      </p>
-    </div>
-
-      <h2>
-        What is confidential patient information
-      </h2>
-      <p>
-        Confidential patient information is when 2 types of information from your health records are joined together.
-      </p>
-      <p>
-        The 2 types of information are:
-      </p>
-      <ul class="nhsuk-list nhsuk-list--bullet">
-        <li>something that can identify you</li>
-        <li>something about your health care or treatment</li>
-      </ul>
-      <p>
-        For example, your name joined with what medicine you take.
-      </p>
-      <p>
-        Identifiable information on its own is used by health and care services to contact patients and this is not confidential patient information.
-      </p>
-      <h2>
-        How we use your confidential patient information
-      </h2>
-      <h3>
-        Your individual care
-      </h3>
-      <p>
-        Health and care staff may use your confidential patient information to help with your treatment and care. For example, when you visit your GP they may look at your records for important information about your health.
-      </p>
-      <h3>
-        Research and planning
-      </h3>
-      <p>
-        Confidential patient information might also be used to:
-      </p>
-      <ul class="nhsuk-list nhsuk-list--bullet">
-        <li>plan and improve health and care services</li>
-        <li>research and develop cures for serious illnesses</li>
-      </ul>
-
-      <h2>
-        Your choice
-      </h2>
-      <p>
-        You can stop your confidential patient information being used for research and planning. <a href="">Find out how to make your choice.</a>
-      </p>
-      <p>
-        If you're happy with your confidential patient information being used for research and planning you do not need to do anything.
-      </p>
-      <p>
-        Any choice you make will not impact your individual care.
-      </p>
-
-    <!-- Navigation -->
-    <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
-      <ul class="nhsuk-list nhsuk-pagination__list">
-
-        <li class="nhsuk-pagination-item--next">
-          <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="/type-1-content/how-confidential-patient">
-            <span class="nhsuk-pagination__title">Next</span>
-            <span class="nhsuk-u-visually-hidden">:</span>
-            <span class="nhsuk-pagination__page">How confidential patient information is used</span>
-            <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
-              <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
 {% endblock %}
 
 

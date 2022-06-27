@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Get security code - Passing data example
+{% endblock %}
+
+{% block beforeContent %}
+<!-- Breadcrumbs -->
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link">Choose if your GP medical records is shared for research and planning</a></li>
+    </ol>
+    <p class="nhsuk-breadcrumb__back">
+      <a href="" class="nhsuk-breadcrumb__backlink">Back to Health A to Z</a>
+    </p>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form action="/version-a/wizard/passing-data-enter-security-code" method="post">
+        <div class="nhsuk-u-reading-width">
+          <h1>Get your security code</h1>
+          <p>
+            With the details you gave us we think we've found your contact details from your health records. We could only find your mobile number.
+          </p>
+          <p>
+            We now need to send you a security code. After 30 minutes your security code will not work.
+          </p>
+          <p class="nhsuk-u-font-weight-bold">
+            We will send your security code by text to ***321.
+          </p>
+        <button class="nhsuk-button">Get code</button>
+      </form>
+      <p>
+        <a href="">What to do if you think these contact details are wrong?</a>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/docs",
+        "label": "Home"
+      },
+      {
+        "URL": "/version-a/wizard/clear-data",
+        "label": "Clear data"
+      },
+      {
+        "URL": "/docs/about",
+        "label": "About and support"
+      },
+      {
+        "URL": "https://github.com/nhsuk/nhsuk-prototype-kit",
+        "label": "NHS.UK prototype kit - GitHub"
+      }
+    ]
+  })}}
+{% endblock %}
