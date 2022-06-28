@@ -1,0 +1,91 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Apps
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+    {
+      text: "Environments",
+      href: "/"
+    },
+    {
+      text: "Apps",
+      href: "/landing-page-app"
+    },
+    {
+      text: "Configuration",
+      href: "/pconfig/landing-page-config"
+    }
+  ],
+  href: "/pconfig/app-search",
+  text: "Apps"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>
+        Type 1 Opt-Out
+      </h1>
+
+      <form action="/examples/passing-data/passing-data-question-dob" method="post" autocomplete="off">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          </legend>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="nhs-number">
+              App ID
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              Title
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Description
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              URL
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="dob">
+              Authentication method
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="dob" name="dob" value="{{ data['dob'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="dob">
+              Allow submissions on behalf of someone else
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="dob" name="dob" value="{{ data['dob'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="postcode">
+              Include Steps, Pages and Actions from:
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="postcode" name="postcode" value="{{ data['postcode'] }}" type="text">
+          </div>
+        </fieldset>
+        <button class="nhsuk-button">Save</button>
+        <button class="nhsuk-button">Return to Search</button>
+        <button class="nhsuk-button">Previous</button>
+        <button class="nhsuk-button">Next</button>
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
+

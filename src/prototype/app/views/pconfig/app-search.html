@@ -1,0 +1,108 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Apps
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+    {
+      text: "Environments",
+      href: "/"
+    },
+    {
+      text: "Apps",
+      href: "/landing-page-app"
+    },
+    {
+      text: "Configuration",
+      href: "/pconfig/landing-page-config"
+    }
+  ],
+  href: "/pconfig/app-search",
+  text: "Apps"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>
+        Apps
+      </h1>
+      <p>Enter any information you have and click Search. To list all values, leave fields blank.</p>
+
+      <form action="/examples/passing-data/passing-data-question-dob" method="post" autocomplete="off">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+
+          </legend>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="nhs-number">
+              App ID
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              Title
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
+          </div>
+        </fieldset>
+        <button class="nhsuk-button" href="/pconfig/app-edit">Search1</button>
+        <button class="nhsuk-button">Clear</button>
+        <button class="nhsuk-button">Add New</button>
+      </form>
+
+      {{ table({
+        responsive: true,
+        panel: false,
+        caption: "",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "App ID"
+          },
+          {
+            text: "Title"
+          }
+        ],
+        rows: [
+          [
+            {
+              header: "App ID",
+              text: "001"
+            },
+            {
+              header: "Title",
+              text: "Type 1 opt-out"
+            }
+          ],
+          [
+            {
+              header: "App ID",
+              text: "002"
+            },
+            {
+              header: "Title",
+              text: "National Data opt-out"
+            }
+          ],
+          [
+            {
+              header: "App ID",
+              text: "003"
+            },
+            {
+              header: "Title",
+              text: "Organ donation Opt-out"
+            }
+          ]
+        ]
+      }) }}
+    </div>
+  </div>
+{% endblock %}
+
