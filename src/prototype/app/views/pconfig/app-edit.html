@@ -46,7 +46,7 @@
             <label class="nhsuk-label" for="first-name">
               Title
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['xfirst-name'] }}" type="text">
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="last-name">
@@ -61,24 +61,81 @@
             <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
           </div>
           <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="dob">
-              Authentication method
+            <label class="nhsuk-label" for="landing-page">
+              Landing page
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="dob" name="dob" value="{{ data['dob'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="/" type="text">
           </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="dob">
-              Allow submissions on behalf of someone else
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="dob" name="dob" value="{{ data['dob'] }}" type="text">
-          </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="postcode">
-              Include Steps, Pages and Actions from:
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="postcode" name="postcode" value="{{ data['postcode'] }}" type="text">
-          </div>
+
+          {{ select({
+            "id": "select-1",
+            "name": "select-1",
+            "label": {
+              "text": "Authentication method"
+            },
+            "items": [
+              {
+                "value": 0,
+                "text": "NHS Login Level P0"
+              },
+              {
+                "value": 5,
+                "text": "NHS Login Level P5",
+                "selected": true
+              },
+              {
+                "value": 9,
+                "text": "NHS Login Level P9",
+                "disabled": false
+              }
+            ]
+          }) }}
+          
+          {{ checkboxes({
+            "idPrefix": "example",
+            "name": "example",
+            
+            "items": [
+              {
+                "value": "delegation",
+                "text": "Allow submissions on behalf of someone else"
+              }
+            ]
+          }) }}
+
+          {{ select({
+            "id": "select-1",
+            "name": "select-1",
+            "label": {
+              "text": "Include Steps, Pages and Actions from:"
+            },
+            "items": [
+              {
+                "value": 2,
+                "text": "National Data Opt-Out",
+                "selected": true
+              },
+              {
+                "value": 3,
+                "text": "Organ Donation Opt-Out",
+                "selected": false
+              },
+              {
+                "value": 4,
+                "text": "COVID-19 Vaccine Communication Opt Out",
+                "disabled": false
+              }
+            ]
+          }) }}
+
         </fieldset>
+
+        {{ button({
+          "text": "Deploy To Test",
+          "classes": "nhsuk-button--secondary"
+        }) }}
+        </br>
+
         <button class="nhsuk-button">Save</button>
         <button class="nhsuk-button">Return to Search</button>
         <button class="nhsuk-button">Previous</button>
