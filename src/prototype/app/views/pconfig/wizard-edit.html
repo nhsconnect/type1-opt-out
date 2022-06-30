@@ -59,53 +59,93 @@
         
         <h2>Steps</h2>
 
-        {{ button({
-          "text": "Landing Page",
-          "classes": "nhsuk-button--secondary"
+        {{ table({
+          responsive: true,
+          panel: false,
+          caption: "",
+          firstCellIsHeader: false,
+          head: [
+            {
+              text: "Step Num"
+            },
+            {
+              text: "Description"
+            }
+          ],
+          rows: [
+            [
+              {
+                header: "Step Num",
+                text: "001"
+              },
+              {
+                header: "Description",
+                text: "Landing Page"
+              }
+            ],
+            [
+              {
+                header: "Step Num",
+                text: "002"
+              },
+              {
+                header: "Description",
+                text: "Overview"
+              }
+            ],
+            [
+              {
+                header: "Step Num",
+                text: "003"
+              },
+              {
+                header: "Description",
+                text: "Make your choice"
+              }
+            ],
+            [
+              {
+                header: "Step Num",
+                text: "004"
+              },
+              {
+                header: "Description",
+                text: "Authentication"
+              }
+            ],
+            [
+              {
+                header: "Step Num",
+                text: "005"
+              },
+              {
+                header: "Description",
+                text: "Current Opt-Out status"
+              }
+            ],
+            [
+              {
+                header: "Step Num",
+                text: "006"
+              },
+              {
+                header: "Description",
+                text: "Set preference"
+              }
+            ],
+            [
+              {
+                header: "Step Num",
+                text: "007"
+              },
+              {
+                header: "Description",
+                text: "Confirmation"
+              }
+            ]
+          ]
         }) }}
-        </br>
-
-        {{ button({
-          "text": "Overview",
-          "classes": "nhsuk-button--secondary"
-        }) }}
-        </br>
-
-        {{ button({
-          "text": "Make your choice",
-          "classes": "nhsuk-button--secondary"
-        }) }}
-        </br>
-
-        {{ button({
-          "text": "Authentication",
-          "classes": "nhsuk-button--secondary"
-        }) }}
-        </br>
-
-        {{ button({
-          "text": "Current Opt-Out status",
-          "classes": "nhsuk-button--secondary"
-        }) }}
-        </br>
-
-        {{ button({
-          "text": "Set preference",
-          "classes": "nhsuk-button--secondary"
-        }) }}
-        </br>
-
-        {{ button({
-          "text": "Confirmation",
-          "classes": "nhsuk-button--secondary"
-        }) }}
-        </br>
-
-        {{ button({
-          "text": "Type 1 Opt-Out Survey",
-          "classes": "nhsuk-button--secondary"
-        }) }}
-        </br>
+      </br>
 
         <a class="nhsuk-button">Save</a>
         <a class="nhsuk-button" href="/pconfig/wizard-search" >Return to Search</a>

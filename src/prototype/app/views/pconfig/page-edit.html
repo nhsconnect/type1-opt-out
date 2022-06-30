@@ -1,27 +1,27 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Patients
+  Pages
 {% endblock %}
 
 {% block beforeContent %}
   {{ breadcrumb({
     items: [
     {
-      text: "Home",
+      text: "Environments",
       href: "/"
     },
     {
-      text: "Configuration",
-      href: "/config/landing-page-config"
+      text: "Apps",
+      href: "/landing-page-app"
     },
     {
-      text: "Test Data",
-      href: "/config/test-data"
+      text: "Configuration",
+      href: "/pconfig/landing-page-config"
     }
   ],
-  href: "/config/patients",
-  text: "Patients"
+  href: "/pconfig/page-search",
+  text: "Pages"
   }) }}
 {% endblock %}
 
@@ -29,54 +29,50 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <h1>
-        Fergus Dunlop
+        Landing page
       </h1>
 
-      <form action="/examples/passing-data/passing-data-question-dob" method="post" autocomplete="off">
+      <form action="#" method="post" autocomplete="off">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           </legend>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="nhs-number">
-              NHS number
+              App ID
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="" type="text">
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="first-name">
-              First name
+              Page ID
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="first-name" name="first-name" value="" type="text">
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="last-name">
-              Last name
+              Description
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="" type="text">
           </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="last-name">
-              Last name
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
-          </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="dob">
-              Date of birth
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="dob" name="dob" value="{{ data['dob'] }}" type="text">
-          </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="postcode">
-              Post code
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="postcode" name="postcode" value="{{ data['postcode'] }}" type="text">
-          </div>
+          {{ textarea({
+            "name": "page-content",
+            "id": "page-content",
+            "label": {
+              "text": "Content"
+            }
+          }) }}
         </fieldset>
-        <button class="nhsuk-button">Save</button>
-        <button class="nhsuk-button">Return to Search</button>
-        <button class="nhsuk-button">Previous</button>
-        <button class="nhsuk-button">Next</button>
+
+        {{ button({
+          "text": "Preview",
+          "classes": "nhsuk-button--secondary"
+        }) }}
+        </br>
+
+        <a class="nhsuk-button">Save</a>
+        <a class="nhsuk-button" href="/pconfig/page-search">Return to Search</a>
+        <a class="nhsuk-button">Previous</a>
+        <a class="nhsuk-button">Next</a>
       </form>
 
     </div>

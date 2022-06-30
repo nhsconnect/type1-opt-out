@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Extension
+  Extension Type
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,8 +20,8 @@
       href: "/pconfig/landing-page-config"
     }
   ],
-  href: "/pconfig/extension-search",
-  text: "Extension"
+  href: "/pconfig/extension-type-search",
+  text: "Extension Type"
   }) }}
 {% endblock %}
 
@@ -29,7 +29,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <h1>
-        GPSS API
+        REST API
       </h1>
 
       <form action="#" method="post" autocomplete="off">
@@ -44,7 +44,7 @@
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="first-name">
-              Extension ID
+              Extension Type ID
             </label>
             <input class="nhsuk-input nhsuk-u-width-one-quarter" id="first-name" name="first-name" value="001" type="text">
           </div>
@@ -54,52 +54,21 @@
             </label>
             <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="" type="text">
           </div>
-          {{ checkboxes({
-            "idPrefix": "example",
-            "name": "example",
-            
-            "items": [
-              {
-                "value": "read",
-                "text": "Read"
-              },
-              {
-                "value": "write",
-                "text": "Write"
-              }
-            ]
-          }) }}
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Class
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Method
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="" type="text">
+          </div>
 
-          {{ select({
-            "id": "select-1",
-            "name": "select-1",
-            "label": {
-              "text": "Extension Type"
-            },
-            "items": [
-              {
-                "value": 1,
-                "text": "REST API",
-                "selected": true
-              },
-              {
-                "value": 2,
-                "text": "Email",
-                "selected": false
-              },
-              {
-                "value": 3,
-                "text": "SMS",
-                "disabled": false
-              },
-              {
-                "value": 4,
-                "text": "Teams message",
-                "disabled": false
-              }
-            ]
-          }) }}
           <h2>Parameters</h2>
+
           {{ table({
             responsive: true,
             panel: false,
@@ -139,10 +108,7 @@
         </br>
         </fieldset>
 
-        <a class="nhsuk-button">Save</a>
-        <a class="nhsuk-button" href="/pconfig/extension-search">Return to Search</a>
-        <a class="nhsuk-button">Previous</a>
-        <a class="nhsuk-button">Next</a>
+        {% include "sub-save-bar.html" %}
       </form>
 
     </div>
