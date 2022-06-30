@@ -14,6 +14,13 @@
             "last_name"  : "Wembly",
             "post_code" : "UB8 2AW",
             "date_of_birth" : "1960-03-19"        
+        },
+        {
+            "nhs_number" : "097211111",
+            "first_name" : "Mike",
+            "last_name"  : "Myres",
+            "post_code" : "RG9 0QA",
+            "date_of_birth" : "2010-01-10"
         }
     ] 
 }
