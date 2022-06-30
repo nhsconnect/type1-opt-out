@@ -33,7 +33,7 @@
       </h1>
       <p>Enter any information you have and click Search. To list all values, leave fields blank.</p>
 
-      <form action="/examples/passing-data/passing-data-question-dob" method="post" autocomplete="off">
+      <form action="/pconfig/wizard-edit" method="post" autocomplete="off">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
 
@@ -57,8 +57,8 @@
             <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="" type="text">
           </div>
         </fieldset>
-        <button class="nhsuk-button" href="/pconfig/wizard-edit">Search</button>
-        <button class="nhsuk-button">Clear</button>
+        <button class="nhsuk-button" href="/pconfig/wizard-edit" id="wizard-edit">Search</button>
+        <a class="nhsuk-button" href="/pconfig/wizard-edit">Clear</a>
         <button class="nhsuk-button">Add New</button>
       </form>
 

@@ -8,19 +8,23 @@
   {{ breadcrumb({
     items: [
     {
-      text: "Home",
+      text: "Environments",
       href: "/"
     },
     {
+      text: "Apps",
+      href: "/landing-page-apps"
+    },
+    {
       text: "Configuration",
-      href: "/config/landing-page-config"
+      href: "/pconfig/landing-page-config"
     },
     {
       text: "Test Data",
-      href: "/config/test-data"
+      href: "/pconfig/test-data"
     }
   ],
-  href: "/config/patients",
+  href: "/pconfig/patients",
   text: "Patients"
   }) }}
 {% endblock %}
@@ -40,7 +44,7 @@
             <label class="nhsuk-label" for="nhs-number">
               NHS number
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="first-name">
@@ -64,19 +68,19 @@
             <label class="nhsuk-label" for="dob">
               Date of birth
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="dob" name="dob" value="{{ data['dob'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="dob" name="dob" value="{{ data['dob'] }}" type="text">
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="postcode">
               Post code
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="postcode" name="postcode" value="{{ data['postcode'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="postcode" name="postcode" value="{{ data['postcode'] }}" type="text">
           </div>
         </fieldset>
-        <button class="nhsuk-button">Save</button>
-        <button class="nhsuk-button">Return to Search</button>
-        <button class="nhsuk-button">Previous</button>
-        <button class="nhsuk-button">Next</button>
+        <a class="nhsuk-button">Save</a>
+        <a class="nhsuk-button" href="/pconfig/patient-edit">Return to Search</a>
+        <a class="nhsuk-button">Previous</a>
+        <a class="nhsuk-button">Next</a>
       </form>
 
     </div>
