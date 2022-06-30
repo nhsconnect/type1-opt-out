@@ -1,0 +1,163 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Patients
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+    {
+      text: "Environments",
+      href: "/"
+    },
+    {
+      text: "Apps",
+      href: "/landing-page-apps"
+    },
+    {
+      text: "Configuration",
+      href: "/pconfig/landing-page-config"
+    },
+    {
+      text: "Test Data",
+      href: "/pconfig/test-data"
+    }
+  ],
+  href: "/pconfig/patients",
+  text: "Patients"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>
+        Patients
+      </h1>
+      <p>Enter any information you have and click Search. To list all values, leave fields blank.</p>
+
+      <form action="/pconfig/patient-edit" method="post" autocomplete="off">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+
+          </legend>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="nhs-number">
+              NHS number
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-half" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              First name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Last name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
+          </div>
+        </fieldset>
+        <button class="nhsuk-button" href="/pconfig/patient-edit">Search</button>
+        <a class="nhsuk-button">Clear</a>
+        <a class="nhsuk-button">Add New</a>
+      </form>
+
+      {{ table({
+        responsive: true,
+        panel: false,
+        caption: "",
+        firstCellIsHeader: false,
+        head: [
+          {
+            text: "NHS number"
+          },
+          {
+            text: "First name"
+          },
+          {
+            text: "Last name"
+          },
+          {
+            text: "Date of birth"
+          },
+          {
+            text: "Post code"
+          }
+        ],
+        rows: [
+          [
+            {
+              header: "NHS number",
+              text: "72254788578"
+            },
+            {
+              header: "First name",
+              text: "Fergus"
+            },
+            {
+              header: "Last name",
+              text: "Dunlop"
+            },
+            {
+              header: "Date of birth",
+              text: "28-Jun-1984"
+            },
+            {
+              header: "Post code",
+              text: "LS4 8AW"
+            }
+          ],
+          [
+            {
+              header: "NHS number",
+              text: "9547816554"
+            },
+            {
+              header: "First name",
+              text: "Helen"
+            },
+            {
+              header: "Last name",
+              text: "Fanshaw"
+            },
+            {
+              header: "Date of birth",
+              text: "14-Sep-1981"
+            },
+            {
+              header: "Post code",
+              text: "LS3 4DC"
+            }
+          ],
+          [
+            {
+              header: "NHS number",
+              text: "6859234751"
+            },
+            {
+              header: "First name",
+              text: "Robert"
+            },
+            {
+              header: "Last name",
+              text: "Jenkins"
+            },
+            {
+              header: "Date of birth",
+              text: "7-Feb-1979"
+            },
+            {
+              header: "Post code",
+              text: "LS4 5GS"
+            }
+          ]
+        ]
+      }) }}
+    </div>
+  </div>
+{% endblock %}
+
