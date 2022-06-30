@@ -17,6 +17,8 @@ build-f:
 build-%:
 	npm run build -w $*
 
+build: build-all
+
 test:
 	npm test -ws
 	
@@ -28,14 +30,15 @@ test-%:
 	npm test -w $*
 
 start:
-	PORT=3000 node src/prototype/app.js > /dev/null 2>&1 &
+	@echo 'Started frontend node.js server on port 3000. http://localhost:3000'
+	@PORT=3000 node src/prototype/app.js > /dev/null 2>&1 &
 
 watch:
+# start prototype and continually watch for code changes
 	npm run watch -w prototype
 	
 stop:
-	kill -9 $(ps aux | grep '[n]ode src/prototype/app.js' | awk '{print $2}')
+	@kill -9 $$(ps -aux | grep '[n]ode src/prototype/app.js' | awk '{print $$2}')
+	@echo 'Frontend node.js Server stopped'
 	
-restart:
-	kill -9 $(ps aux | grep '[n]ode src/prototype/app.js' | awk '{print $2}')
-	$(MAKE) start
+restart: stop start

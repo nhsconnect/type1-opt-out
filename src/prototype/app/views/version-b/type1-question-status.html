@@ -1,0 +1,84 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Type 1 Opt-out service: Make your choice
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <div class="nhsuk-card">
+        <div class="nhsuk-card__content">
+          <h3 class="nhsuk-card__heading">
+            Your current choice:
+      
+          </h3>
+          <p class="nhsuk-card__description">You do allow the use of your GP data to support vital health and care planning and research. Check what this means for you (Page opens in new window).</p>
+        </div>
+      </div>
+
+      <h1>
+        Set your GP data opt-out choice
+      </h1>
+
+      <p>
+        The data held in your GP medical records is shared with other healthcare professionals for the purposes of your individual care. It is also shared with other organisations to support health and care planning and research.
+      </p>
+
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">About your decision: </span>
+        <p>Your decision will not affect your individual care and you can change your mind anytime you like.</p>
+      </div>
+
+      <div class="nhsuk-form-group">
+
+        <form action="/docs/examples/branching/answer" method="post">
+  
+          {% call fieldset({
+            legend: {
+              text: "Do you allow your personally identifiable patient data to be shared outside of your GP practice for purposes except your own care to support health and care planning and research?",
+              classes: "nhsuk-fieldset__legend--l",
+              isPageHeading: true
+            }
+          }) %}
+  
+          {{ radios({
+            "idPrefix": "know-nhs-number",
+            "name": "know-nhs-number",
+            "items": [
+              {
+                "value": "Yes",
+                "text": "Yes"
+              },
+              {
+                "value": "No",
+                "text": "No"
+              }
+            ]
+          }) }}
+  
+          <div class="nhsuk-u-padding-bottom-2"></div>
+
+          {% endcall %}
+  
+          {{ button({
+            "text": "Continue"
+          }) }}
+  
+        </form>
+  
+      </div>   
+
+      </div>
+      {% endblock %}

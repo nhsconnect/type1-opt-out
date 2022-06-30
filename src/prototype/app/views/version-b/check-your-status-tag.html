@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+
+{% block pageTitle %}
+  Your choice - Types of data-sharing you can opt out
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-u-margin-top-4">
+        Your Opt-out choice
+      </h1>
+
+      <p class="nhsuk-body-l">
+        Choose whether or not your data is used for research and planning. These are the different types of data-sharing you can opt out of:
+      </p>
+
+      <table class="nhsuk-table">
+        <thead class="nhsuk-table__head">
+          <tr class="nhsuk-table__row">
+            <th class="nhsuk-table__header" scope="col"> Name of opt-out </th>
+            <th class="nhsuk-table__header" scope="col"> Status </th>
+          </tr>
+        </thead>
+        <tbody class="nhsuk-table__body">
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">
+              <a href="/check-your-status-type1">Type 1</a>
+            </td>
+            <td class="nhsuk-table__cell">
+              <strong class="nhsuk-tag nhsuk-tag--grey">
+        Opted-Out by GP practise
+      </strong>
+      
+            </td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">
+              National Data Opt Out
+            </td>
+            <td class="nhsuk-table__cell">
+              <strong class="nhsuk-tag">
+        Active
+      </strong>
+      
+            </td>
+          </tr>
+          <tr class="nhsuk-table__row">
+            <td class="nhsuk-table__cell">
+              NCVIPS
+            </td>
+            <td class="nhsuk-table__cell">
+              <strong class="nhsuk-tag nhsuk-tag--grey">
+        Opted-Out by you
+      </strong>
+      
+            </td>
+          </tr>
+      
+        </tbody>
+      </table>
+
+      <p>
+        For more details or to change status of your opt out click on the Opt-out service.
+      </p>
+
+      <p><a href="https://service-manual.nhs.uk/design-system/componnets">Don't remember requesting this?</a></p>
+      
+      
+    </div>
+  </div>
+{% endblock %}

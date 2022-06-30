@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Type 1 Opt-Out - Configuration
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+    {
+      text: "Environments",
+      href: "/"
+    },
+    {
+      text: "Apps",
+      href: "/landing-page-apps"
+    }
+  ],
+  text: "Configuration",
+  href: "/pconfig/landing-page-config"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Configuration
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/pconfig/app-search",
+            text: "Apps"
+          },
+          {
+            href: "/pconfig/wizard-search",
+            text: "Wizards"
+          },
+          {
+            href: "/pconfig/page-search",
+            text: "Pages"
+          },
+          {
+            href: "/pconfig/action-search",
+            text: "Actions"
+          },
+          {
+            href: "/pconfig/extension-search",
+            text: "Extensions"
+          },
+          {
+            href: "/pconfig/message-search",
+            text: "Strings"
+          },
+          {
+            href: "/pconfig/landing-page-dashboard",
+            text: "Dashboard"
+          },
+          {
+            href: "/pconfig/landing-page-test-data",
+            text: "Test Data"
+          }
+        ]
+      }) }}
+    </div>
+  </div>
+{% endblock %}

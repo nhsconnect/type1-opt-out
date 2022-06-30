@@ -1,0 +1,89 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Patients
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+    {
+      text: "Environments",
+      href: "/"
+    },
+    {
+      text: "Apps",
+      href: "/landing-page-apps"
+    },
+    {
+      text: "Configuration",
+      href: "/pconfig/landing-page-config"
+    },
+    {
+      text: "Test Data",
+      href: "/pconfig/test-data"
+    }
+  ],
+  href: "/pconfig/patients",
+  text: "Patients"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>
+        Fergus Dunlop
+      </h1>
+
+      <form action="/examples/passing-data/passing-data-question-dob" method="post" autocomplete="off">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          </legend>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="nhs-number">
+              NHS number
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              First name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Last name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Last name
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="dob">
+              Date of birth
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="dob" name="dob" value="{{ data['dob'] }}" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="postcode">
+              Post code
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="postcode" name="postcode" value="{{ data['postcode'] }}" type="text">
+          </div>
+        </fieldset>
+        <a class="nhsuk-button">Save</a>
+        <a class="nhsuk-button" href="/pconfig/patient-edit">Return to Search</a>
+        <a class="nhsuk-button">Previous</a>
+        <a class="nhsuk-button">Next</a>
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
+

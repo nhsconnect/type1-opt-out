@@ -1,0 +1,119 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Wizards
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+    {
+      text: "Environments",
+      href: "/"
+    },
+    {
+      text: "Apps",
+      href: "/landing-page-apps"
+    },
+    {
+      text: "Configuration",
+      href: "/pconfig/landing-page-config"
+    }
+  ],
+  href: "/pconfig/wizard-search",
+  text: "Wizards"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>
+        Type 1 Opt-Out
+      </h1>
+
+      <form action="/examples/passing-data/passing-data-question-dob" method="post" autocomplete="off">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          </legend>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="nhs-number">
+              App ID
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="001" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="first-name">
+              Description
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="Type 1 Opt-Out" type="text">
+          </div>
+          {{ textarea({
+            "name": "descr-long",
+            "id": "descr-long",
+            "label": {
+              "text": "Long Description"
+            }
+          }) }}
+        </fieldset>
+        
+        <h2>Steps</h2>
+
+        {{ button({
+          "text": "Landing Page",
+          "classes": "nhsuk-button--secondary"
+        }) }}
+        </br>
+
+        {{ button({
+          "text": "Overview",
+          "classes": "nhsuk-button--secondary"
+        }) }}
+        </br>
+
+        {{ button({
+          "text": "Make your choice",
+          "classes": "nhsuk-button--secondary"
+        }) }}
+        </br>
+
+        {{ button({
+          "text": "Authentication",
+          "classes": "nhsuk-button--secondary"
+        }) }}
+        </br>
+
+        {{ button({
+          "text": "Current Opt-Out status",
+          "classes": "nhsuk-button--secondary"
+        }) }}
+        </br>
+
+        {{ button({
+          "text": "Set preference",
+          "classes": "nhsuk-button--secondary"
+        }) }}
+        </br>
+
+        {{ button({
+          "text": "Confirmation",
+          "classes": "nhsuk-button--secondary"
+        }) }}
+        </br>
+
+        {{ button({
+          "text": "Type 1 Opt-Out Survey",
+          "classes": "nhsuk-button--secondary"
+        }) }}
+        </br>
+
+        <a class="nhsuk-button">Save</a>
+        <a class="nhsuk-button" href="/pconfig/wizard-search" >Return to Search</a>
+        <a class="nhsuk-button">Previous</a>
+        <a class="nhsuk-button">Next</a>
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
+

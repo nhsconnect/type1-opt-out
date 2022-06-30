@@ -1,13 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Type 1 Opt-Out
+  Type 1 Opt-Out - Environments
 {% endblock %}
 
 {% block beforeContent %}
   {{ breadcrumb({
     href: "/",
-    text: "Home"
+    text: "Environments"
   }) }}
 {% endblock %}
 
@@ -22,24 +22,27 @@
       {{ contentsList({
         items: [
           {
-            href: "/landing-page-prototype",
-            text: "Prototype"
+            href: "http://localhost:3000/landing-page-apps",
+            text: "Local"
           },
           {
-            href: "/frontend/index.html",
+            href: "https://type1-opt-out-develop.herokuapp.com/landing-page-apps",
             text: "Development"
           },
           {
-            href: "/landing-page-release-1",
+            href: "https://type1-opt-out-release-1.herokuapp.com/landing-page-apps",
             text: "Release 1.0 (stable)"
           },
           {
-            href: "/landing-page-prod",
+            href: "https://type1-opt-out.herokuapp.com/landing-page-apps",
             text: "Production"
+<<<<<<< HEAD
           },
           {
             href: "/config/",
             text: "Configuration"
+=======
+>>>>>>> origin/develop
           }
         ]
       }) }}

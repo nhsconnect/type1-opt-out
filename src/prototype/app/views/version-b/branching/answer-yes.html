@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% set mainClasses = 'nhsuk-main-wrapper--s' %}
+
+{% block pageTitle %}
+  Example - Branching - Yes
+{% endblock %}
+
+{% block outerContent %}
+  {{ backLink({
+    "href": "/type1-question",
+    "text": "Back",
+    "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
+  }) }}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <h1>
+      Review your choice
+    </h1>
+
+    <div class="nhsuk-card">
+      <div class="nhsuk-card__content">
+        <h3 class="nhsuk-card__heading">
+          You answered 'Yes'
+    
+        </h3>
+        <p class="nhsuk-card__description">You allow your personally identifiable patient data to be shared outside your GP practice for purposes except your own care to support health and care planning and research. <a href="step1">Change</a></p>
+        <p class="nhsuk-card__description">We will send confirmation of your choice to your phone number ***321 and your email mat***@gmail.com</p>
+      </div>
+    </div>
+
+    <a class="nhsuk-button" href="/version-b/request-confirmed-yes" class="button">Confirm</a>
+  </div>
+
+</div>
+
+{% endblock %}
