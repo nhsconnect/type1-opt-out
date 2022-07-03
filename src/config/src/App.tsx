@@ -47,16 +47,20 @@ useEffect(() => {
     
     <>
     
-
-  
+   
+    <header className="nhsuk-header" role="banner">
+    <ServiceHeader />  
+    </header>
+    
+    <div className="nhsuk-width-container ">
+    
     <Breadcrumbs crumbs={crumbs} selected = {selected} />
     
     <Router>
     
-      <div className="App">
-      <ServiceHeader />
       
-        <div>
+          
+         
           <Routes>
             <Route path="/config"  element={<Home />}>
                        
@@ -73,14 +77,16 @@ useEffect(() => {
               
             </Route>
           </Routes>
-         
+      </Router>
         
+      
+      
+      
+      
       </div>
       <ServiceFooter />
-      </div>
-    
       
-      </Router>
+     
       
     </>
   )
