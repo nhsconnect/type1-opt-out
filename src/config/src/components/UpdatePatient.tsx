@@ -17,6 +17,13 @@ const handlesave= (e:any) => {
     })
 
 }
+const handleprevious= (e:any) => {
+}
+const handlenext= (e:any) => {
+}
+const handleback= (e:any) => {
+}
+
 
     return(
         <main className="nhsuk-main-wrapper " id="maincontent" role="main">
