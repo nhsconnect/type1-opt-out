@@ -1,27 +1,27 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Patients
+  Action
 {% endblock %}
 
 {% block beforeContent %}
   {{ breadcrumb({
     items: [
     {
-      text: "Home",
+      text: "Environments",
       href: "/"
     },
     {
-      text: "Configuration",
-      href: "/config/landing-page-config"
+      text: "Apps",
+      href: "/landing-page-app"
     },
     {
-      text: "Test Data",
-      href: "/config/test-data"
+      text: "Configuration",
+      href: "/pconfig/landing-page-config"
     }
   ],
-  href: "/config/patients",
-  text: "Patients"
+  href: "/pconfig/action-search",
+  text: "Actions"
   }) }}
 {% endblock %}
 
@@ -29,54 +29,99 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <h1>
-        Fergus Dunlop
+        Set Opt-Out
       </h1>
 
-      <form action="/examples/passing-data/passing-data-question-dob" method="post" autocomplete="off">
+      <form action="#" method="post" autocomplete="off">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           </legend>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="nhs-number">
-              NHS number
+              App ID
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="001" type="text">
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="first-name">
-              First name
+              Action ID
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="first-name" name="first-name" value="001" type="text">
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="last-name">
-              Last name
+              Description
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="" type="text">
           </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="last-name">
-              Last name
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
-          </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="dob">
-              Date of birth
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="dob" name="dob" value="{{ data['dob'] }}" type="text">
-          </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="postcode">
-              Post code
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="postcode" name="postcode" value="{{ data['postcode'] }}" type="text">
-          </div>
+          {{ select({
+            "id": "select-1",
+            "name": "select-1",
+            "label": {
+              "text": "Extension"
+            },
+            "items": [
+              {
+                "value": 1,
+                "text": "GPSS API Call",
+                "selected": true
+              },
+              {
+                "value": 2,
+                "text": "Spine API Call",
+                "selected": false
+              },
+              {
+                "value": 3,
+                "text": "Outbound Email",
+                "disabled": false
+              }
+            ]
+          }) }}
+          <h2>Parameters</h2>
+          {{ table({
+            responsive: true,
+            panel: false,
+            caption: "",
+            firstCellIsHeader: false,
+            head: [
+              {
+                text: "Key"
+              },
+              {
+                text: "Value"
+              }
+            ],
+            rows: [
+              [
+                {
+                  header: "Key",
+                  text: "nhs_number"
+                },
+                {
+                  header: "Value",
+                  text: "patient.nhsnumber"
+                }
+              ],
+              [
+                {
+                  header: "Key",
+                  text: "opt_out_preference"
+                },
+                {
+                  header: "Value",
+                  text: "patient.opt_out_preference"
+                }
+              ]
+            ]
+          }) }}
+        </br>
         </fieldset>
-        <button class="nhsuk-button">Save</button>
-        <button class="nhsuk-button">Return to Search</button>
-        <button class="nhsuk-button">Previous</button>
-        <button class="nhsuk-button">Next</button>
+
+        <a class="nhsuk-button">Save</a>
+        <a class="nhsuk-button" href="/pconfig/action-search">Return to Search</a>
+        <a class="nhsuk-button">Previous</a>
+        <a class="nhsuk-button">Next</a>
       </form>
 
     </div>
