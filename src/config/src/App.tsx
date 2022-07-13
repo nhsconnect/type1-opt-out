@@ -8,8 +8,7 @@ import reactLogo from './assets/react.svg'
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Link, Route, Routes} from 'react-router-dom';
 import Patients from './components/Patients';
-import React from 'react';
-import useBreadcrumbs from 'use-react-router-breadcrumbs';
+
 import TestDataPage from './components/TestDataPage';
 import AddPatient from './components/AddPatient';
 function App() {
