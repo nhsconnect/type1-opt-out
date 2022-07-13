@@ -8,7 +8,7 @@
 
 {% block outerContent %}
   {{ backLink({
-    "href": "/check-your-status-type1",
+    "href": "/version-b/check-your-status-type1",
     "text": "Back",
     "classes": "nhsuk-u-margin-top-4 nhsuk-u-margin-bottom-0"
   }) }}
@@ -23,7 +23,7 @@
       </h1>
 
       <p>
-        The data held in your GP medical records is shared with other healthcare professionals for the purposes of your individual care. It is also shared with other organisations to support health and care planning and research.
+        The data held in your GP medical records is shared with other healthcare professionals for the purposes of your individual care. It is also shared with other organisations to support health and care planning and research, and other purposes.
       </p>
 
       <div class="nhsuk-inset-text">
@@ -33,11 +33,11 @@
 
       <div class="nhsuk-form-group">
 
-        <form action="/docs/examples/branching/answer" method="post">
+        <form action="/version-b/branching/answer" method="post">
   
           {% call fieldset({
             legend: {
-              text: "Do you allow your personally identifiable patient data to be shared outside of your GP practice for purposes except your own care to support health and care planning and research?",
+              text: "Do you allow the use of your GP data to be shared outside your GP practice for purposes other than to support your individual care? (For example, to support health and care planning and research)",
               classes: "nhsuk-fieldset__legend--l",
               isPageHeading: true
             }
