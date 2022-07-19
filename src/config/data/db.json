@@ -39,6 +39,14 @@
       "dateofbirth": "2022-07-03",
       "postcode": "RG",
       "id": 5
+    },
+    {
+      "nhsnumber": "898120101",
+      "firstname": "Nick",
+      "lastname": "Etuk",
+      "dateofbirth": "2000-02-02",
+      "postcode": "UB8 2AW",
+      "id": 6
     }
   ]
 }

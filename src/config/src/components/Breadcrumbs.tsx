@@ -1,42 +1,58 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useBreadcrumbs from 'use-react-router-breadcrumbs'
+import { Breadcrumb } from "nhsuk-react-components";
 
-function Breadcrumbs(props:any) {
-    
-    
-    const addCrumb = (crumb:any) => {
-        
+function Breadcrumbs(props: any) {
+
+
+    const addCrumb = (crumb: any) => {
+
     }
-    function islast(index:number) {
+    function islast(index: number) {
         return (
             index === props.crumbs.length - 1
         )
     }
-    return(
-        //<Breadcrumb separator=' > '>
-        //{
-            props.crumbs.map((key:any,index:number) => {
-                //const disabled = islast(ci) ? 'disabled' : '';
-                return (
-                    //<BreadcrumbItem href={key.path}  > 
+    return (
 
-                        //{
-                            key.name
-                        //}
+        <Breadcrumb>
+            {
+                props.crumbs.map((key: any, index: number) => {
+                    const disabled = islast(index) ? true : false;
+                    console.log(disabled)
+                    if (disabled) {
+                        return (
 
+                            <Breadcrumb.Item style={{ textDecoration: 'none', pointerEvents: 'none', color: "grey" }} href={disabled ? 'hi' : key.path}>
+                                {
+                                    key.name
+                                }
+                            </Breadcrumb.Item>
 
-                    //</BreadcrumbItem>
-                );
+                        )
+                    }
+                    else {
+                        return (
+                            <Breadcrumb.Item href={key.path}>
+                                {
+                                    key.name
+                                }
 
+                            </Breadcrumb.Item>
+
+                        )
+                    }
+
+                }
+
+                )
             }
-        
-        )
-    //}
 
-        //</Breadcrumb>
-    )  
-    
+        </Breadcrumb>
+    )
+
 }
 
 export default Breadcrumbs;
