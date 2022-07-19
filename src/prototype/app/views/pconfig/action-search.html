@@ -1,27 +1,27 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-  Patients
+  Actions
 {% endblock %}
 
 {% block beforeContent %}
   {{ breadcrumb({
     items: [
     {
-      text: "Home",
+      text: "Environments",
       href: "/"
     },
     {
-      text: "Configuration",
-      href: "/config/landing-page-config"
+      text: "Apps",
+      href: "/landing-page-app"
     },
     {
-      text: "Test Data",
-      href: "/config/test-data"
+      text: "Configuration",
+      href: "/pconfig/landing-page-config"
     }
   ],
-  href: "/config/patients",
-  text: "Patients"
+  href: "/pconfig/action-search",
+  text: "Actions"
   }) }}
 {% endblock %}
 
@@ -29,37 +29,37 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <h1>
-        Patients
+        Actions
       </h1>
       <p>Enter any information you have and click Search. To list all values, leave fields blank.</p>
 
-      <form action="/examples/passing-data/passing-data-question-dob" method="post" autocomplete="off">
+      <form action="/pconfig/action-edit" method="post" autocomplete="off">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
 
           </legend>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="nhs-number">
-              NHS number
+              App ID
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="001" type="text">
+          </div>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="nhs-number">
+              Action ID
+            </label>
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="" type="text">
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="first-name">
-              First name
+              Description
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
-          </div>
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="last-name">
-              Last name
-            </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="last-name" name="last-name" value="{{ data['last-name'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="" type="text">
           </div>
         </fieldset>
-        <button class="nhsuk-button" href="/config/patient-edit">Search</button>
-        <button class="nhsuk-button">Clear</button>
-        <button class="nhsuk-button">Add New</button>
+        <button class="nhsuk-button" href="/pconfig/action-edit">Search</button>
+        <a class="nhsuk-button">Clear</a>
+        <a class="nhsuk-button">Add New</a>
       </form>
 
       {{ table({
@@ -69,86 +69,42 @@
         firstCellIsHeader: false,
         head: [
           {
-            text: "NHS number"
+            text: "App ID"
           },
           {
-            text: "First name"
+            text: "Action ID"
           },
           {
-            text: "Last name"
-          },
-          {
-            text: "Date of birth"
-          },
-          {
-            text: "Post code"
+            text: "Description"
           }
         ],
         rows: [
           [
             {
-              header: "NHS number",
-              text: "72254788578"
+              header: "App ID",
+              text: "001"
             },
             {
-              header: "First name",
-              text: "Fergus"
+              header: "Action ID",
+              text: "001"
             },
             {
-              header: "Last name",
-              text: "Dunlop"
-            },
-            {
-              header: "Date of birth",
-              text: "28-Jun-1984"
-            },
-            {
-              header: "Post code",
-              text: "LS4 8AW"
+              header: "Description",
+              text: "Get Opt-Out"
             }
           ],
           [
             {
-              header: "NHS number",
-              text: "9547816554"
+              header: "App ID",
+              text: "002"
             },
             {
-              header: "First name",
-              text: "Helen"
+              header: "Action ID",
+              text: "002"
             },
             {
-              header: "Last name",
-              text: "Fanshaw"
-            },
-            {
-              header: "Date of birth",
-              text: "14-Sep-1981"
-            },
-            {
-              header: "Post code",
-              text: "LS3 4DC"
-            }
-          ],
-          [
-            {
-              header: "NHS number",
-              text: "6859234751"
-            },
-            {
-              header: "First name",
-              text: "Robert"
-            },
-            {
-              header: "Last name",
-              text: "Jenkins"
-            },
-            {
-              header: "Date of birth",
-              text: "7-Feb-1979"
-            },
-            {
-              header: "Post code",
-              text: "LS4 5GS"
+              header: "Description",
+              text: "Set Opt-Out"
             }
           ]
         ]

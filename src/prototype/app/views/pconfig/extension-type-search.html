@@ -1,7 +1,9 @@
 {% extends 'layout.html' %}
+{% set componentName = "extension-type" %}
+{% set componentLabel = "Extension Types" %}
 
 {% block pageTitle %}
-  Pages
+  {{ componentLabel }}
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,8 +22,8 @@
       href: "/pconfig/landing-page-config"
     }
   ],
-  href: "/pconfig/page-search",
-  text: "Pages"
+  href: "/pconfig/"+componentName+"-search",
+  text: componentLabel
   }) }}
 {% endblock %}
 
@@ -29,11 +31,11 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <h1>
-        Pages
+        {{ componentLabel }}
       </h1>
       <p>Enter any information you have and click Search. To list all values, leave fields blank.</p>
 
-      <form action="/pconfig/page-edit" method="post" autocomplete="off">
+      <form action="/pconfig/{{ componentName }}-edit" method="post" autocomplete="off">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
 
@@ -42,24 +44,23 @@
             <label class="nhsuk-label" for="nhs-number">
               App ID
             </label>
-            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="001" type="text">
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="nhs-number">
-              Page ID
+              Extension Type ID
             </label>
-            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="{{ data['nhs-number'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-one-quarter" id="nhs-number" name="nhs-number" value="" type="text">
           </div>
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="first-name">
               Description
             </label>
-            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="{{ data['first-name'] }}" type="text">
+            <input class="nhsuk-input nhsuk-u-width-three-quarters" id="first-name" name="first-name" value="" type="text">
           </div>
         </fieldset>
-        <button class="nhsuk-button" href="/pconfig/page-edit">Search</button>
-        <a class="nhsuk-button">Clear</a>
-        <a class="nhsuk-button">Add New</a>
+
+        {% include "sub-search-bar.html" %}
       </form>
 
       {{ table({
@@ -72,7 +73,7 @@
             text: "App ID"
           },
           {
-            text: "Page ID"
+            text: "Extension Type ID"
           },
           {
             text: "Description"
@@ -85,54 +86,54 @@
               text: "001"
             },
             {
-              header: "Page ID",
+              header: "Extension Type ID",
               text: "001"
             },
             {
               header: "Description",
-              text: "Landing Page"
+              text: "REST API"
             }
           ],
           [
             {
               header: "App ID",
+              text: "001"
+            },
+            {
+              header: "Extension Type ID",
               text: "002"
             },
             {
-              header: "Page ID",
-              text: "002"
-            },
-            {
               header: "Description",
-              text: "Overview"
+              text: "Outbound email"
             }
           ],
           [
             {
               header: "App ID",
-              text: "003"
+              text: "001"
             },
             {
-              header: "Page ID",
+              header: "Extension Type ID",
               text: "003"
             },
             {
               header: "Description",
-              text: "Make your choice"
+              text: "SMS message"
             }
           ],
           [
             {
               header: "App ID",
-              text: "004"
+              text: "001"
             },
             {
-              header: "Page ID",
+              header: "Extension Type ID",
               text: "004"
             },
             {
               header: "Description",
-              text: "Authentication name"
+              text: "Teams message"
             }
           ]
         ]
