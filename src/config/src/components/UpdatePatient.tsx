@@ -30,7 +30,6 @@ const UpdatePatient = (patient: any) => {
 
             <div className="nhsuk-grid-row">
                 <div className="nhsuk-grid-column-two-thirds">
-
                     <form>
                         <fieldset className="nhsuk-fieldset">
                             <legend className="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
