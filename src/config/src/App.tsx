@@ -54,12 +54,10 @@ function App() {
         <Breadcrumbs  crumbs={crumbs.slice(0,pageLocIndex+1)}>
         </Breadcrumbs>
         <Routes>
-      
           <Route path="/config"  element={ <Home />} />
           <Route path="/config/testdata" element={<TestDataPage />}/>
           <Route  path="/config/addpatient"  element={<AddPatient />}/>
           <Route path = "/config/patients" element={<Patients />}/>
-          
         </Routes>
       
       </div>
