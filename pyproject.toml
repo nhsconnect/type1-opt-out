@@ -17,9 +17,6 @@ fakeredis = "^1.8.1"
 pytest = "^7.1.2"
 bs4 = "^0.0.1"
 
-[tool.poetry.group.dev.dependencies]
-
-
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
 aws-lambda-powertools = "^1.26.2"
