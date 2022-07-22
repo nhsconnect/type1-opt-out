@@ -18,6 +18,9 @@
     "src/backend",
     "src/config"
   ],
+  "engines": {
+    "node": ">=18.3.0"
+  },
   "dependencies": {
     "nhsuk-frontend": "^6.1.1",
     "nhsuk-react-components": "^2.1.0",
